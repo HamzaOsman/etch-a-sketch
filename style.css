@@ -1,0 +1,18 @@
+#grid-container {
+    border: 10px solid black;
+    display: grid;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+}
+
+button {
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: block;
+}
+
+#title {
+    text-align: center;
+}
