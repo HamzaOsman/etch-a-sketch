@@ -9,21 +9,20 @@ resetButton.addEventListener("click", () => {
 
 
 function createGrid(dimension) {
-    let s = "repeat(" + dimension + ", auto)";
-    gridContainer.style.gridTemplateColumns = s;
-
+    gridContainer.style.cssText = `grid-template-columns: repeat(${dimension}, auto)`
+    
     for (let i = 0; i < dimension ** 2; i++) {
         const div = document.createElement("div");
         div.setAttribute("class", "grid-box");
-       
+
         let randRed = Math.floor(Math.random() * 255);
         let randGreen = Math.floor(Math.random() * 255);
         let randBlue = Math.floor(Math.random() * 255);
 
-        let s2 = "rgb("+randRed+","+randGreen+","+randBlue+")";
-            div.addEventListener('mouseover', () => {
-                div.style.backgroundColor = s2
-            });
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = `rgb(${randRed}, ${randGreen}
+                    ,${randBlue})`
+        });
 
         gridContainer.appendChild(div);
     }
